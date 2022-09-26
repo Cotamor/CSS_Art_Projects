@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500;700&display=swap');
+
+:root {
+  --primary-color1: #0a3d64;
+  --secondary-color1: #ddb0a7;
+  --secondary-color2: #eaad5a;
+  --accent-color1: #a8b293;
+  --accent-color2: #df8053;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: var(--primary-color1);
+  background-color: var(--secondary-color2);
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  position: relative;
+  margin-left: 50px;
+}
+h3 {
+  margin-top: 0;
+  padding-top: 16px;
+}
+h2::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100px;
+  background-color: #444;
+  border-radius: 20px;
+  bottom: -5px;
+  left: 0px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 70px;
+}
+li {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 14px;
+  list-style-type: none;
+  margin: 20px;
+  text-align: center;
+  width: 350px;
+}
+li > a {
+  display: block;
+  border-bottom: #000;
+}
+li img {
+  display: block;
+  object-fit: cover;
+  height: 200px;
+  width: 350px;
+}
+button {
+  background-color: var(--accent-color1);
+  color: whitesmoke;
+  border: none;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 7px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+button:hover {
+  opacity: 0.8;
+}
+button:active {
+  transform: scale(0.9);
+}
+footer {
+  background-color: var(--accent-color2);
+  font-size: 18px;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  padding: 20px;
+}
+footer a {
+  color: black;
+  font-weight: bold;
+}
+footer i {
+  color: green;
+}

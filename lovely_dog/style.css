@@ -1,0 +1,112 @@
+body {
+  background-color: #ffffb3;
+  margin: 0;
+  padding: 0;
+}
+.dog {
+  position: absolute;
+  background-color: #fdb44e;
+  height: 75px;
+  width: 120px;
+  top: 40%;
+  left: 35%;
+  border-radius: 0px 0px 0px 120px;
+}
+.body {
+  background-color: #fdb44e;
+  height: 100px;
+  width: 180px;
+  position: relative;
+  top: 55px;
+  left: 70px;
+  border-radius: 0px 0px 0px 60px;
+}
+.leg1,
+.leg2,
+.leg3,
+.leg4 {
+  background-color: #fdb44e;
+  height: 50px;
+  width: 18px;
+  position: relative;
+}
+.leg1 {
+  left: 100px;
+  top: 48px;
+}
+.leg2 {
+  left: 129px;
+  bottom: 2px;
+}
+.leg3 {
+  left: 203px;
+  top: -50px;
+  background-color: rgba(151, 89, 2, 0.5);
+  z-index: -1;
+}
+.leg4 {
+  left: 232px;
+  top: -100px;
+}
+.tail {
+  width: 0px;
+  height: 0px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 70px solid #fdb44e;
+  position: relative;
+  right: -231px;
+  bottom: 305px;
+  transform: rotate(30deg);
+  animation: wag 1s infinite;
+  transform-origin: bottom;
+}
+@keyframes wag {
+  50% {
+    transform: rotate(50deg);
+  }
+}
+.ear {
+  width: 45px;
+  height: 80px;
+  background-color: rgb(177, 114, 3);
+  border-radius: 0px 0px 40px 40px;
+  position: relative;
+  bottom: 369px;
+  left: 75px;
+}
+.nose {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  position: relative;
+  border-radius: 50%;
+  bottom: 453px;
+  left: -2px;
+}
+.eye {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  position: relative;
+  border-radius: 50%;
+  bottom: 453px;
+  left: 46px;
+}
+.tongue {
+  width: 10px;
+  height: 20px;
+  background-color: tomato;
+  border-radius: 13px;
+  transform: rotate(45deg);
+  position: relative;
+  bottom: 440px;
+  left: 18px;
+  z-index: -2;
+  animation: move 1s infinite;
+}
+@keyframes move {
+  50% {
+    transform: rotate(45deg) translateY(4px);
+  }
+}

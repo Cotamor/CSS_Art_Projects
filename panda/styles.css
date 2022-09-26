@@ -1,0 +1,143 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffe680;
+  margin: 0;
+  padding: 0;
+}
+.panda {
+  position: absolute;
+  height: 120px;
+  width: 80px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.face {
+  position: relative;
+  background-color: white;
+  border: 5px solid black;
+  height: 90px;
+  width: 110px;
+  border-radius: 50%;
+  top: -30px;
+  right: 20px;
+}
+.ear-l,
+.ear-r {
+  position: relative;
+  background-color: black;
+  height: 25px;
+  width: 40px;
+  border-radius: 0 0 40px 40px;
+}
+.ear-l {
+  background-color: black;
+  transform: rotate(145deg);
+  bottom: 13px;
+  right: 8px;
+}
+.ear-r {
+  background-color: black;
+  transform: rotate(-145deg);
+  left: 70px;
+  bottom: 38px;
+}
+.eye-l,
+.eye-r {
+  position: relative;
+  width: 28px;
+  height: 33px;
+  border-radius: 50%;
+}
+.eye-l {
+  /* position: absolute; */
+  background-color: black;
+  bottom: 30px;
+  left: 10px;
+  transform: rotate(25deg);
+}
+.eye-r {
+  /* position: absolute; */
+  background-color: black;
+  bottom: 63px;
+  left: 62px;
+  transform: rotate(-25deg);
+}
+.eyeball {
+  position: relative;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: white;
+}
+.nose {
+  position: relative;
+  height: 8px;
+  width: 15px;
+  background-color: black;
+  border-radius: 15px;
+  bottom: 65px;
+  left: 42px;
+}
+.hand-l,
+.hand-r {
+  position: relative;
+  width: 25px;
+  height: 43px;
+  background-color: black;
+  border-radius: 30px;
+}
+.hand-l {
+  transform: rotate(90deg);
+  bottom: 27px;
+  right: 14px;
+  animation: wave 3s infinite;
+  transform-origin: top;
+}
+@keyframes wave {
+  50% {
+    transform: rotate(120deg);
+  }
+}
+.hand-r {
+  transform: rotate(-90deg);
+  bottom: 92px;
+  left: 80px;
+}
+.leg-l,
+.leg-r {
+  position: relative;
+  background-color: black;
+  width: 17px;
+  height: 25px;
+  border-radius: 0 0 30px 30px;
+}
+.leg-l {
+  bottom: 63px;
+  left: 13px;
+}
+.leg-r {
+  bottom: 88px;
+  left: 39px;
+}
+.shadow {
+  position: relative;
+  width: 90px;
+  height: 19px;
+  background-color: rgba(136, 133, 118, 0.5);
+  bottom: 97px;
+  left: -11px;
+  border-radius: 98%;
+  z-index: -10;
+}

@@ -6,6 +6,7 @@ const projects = [
   { name: 'pingpong' },
   { name: 'sunset' },
   { name: 'flying_bird' },
+  { name: 'heartbeat' },
 ]
 const list = document.getElementById('list')
 

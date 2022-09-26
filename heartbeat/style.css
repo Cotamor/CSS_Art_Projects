@@ -1,0 +1,37 @@
+body {
+  background-color: #ff9999;
+  padding: 0px;
+  margin: 0px;
+}
+
+.heart {
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 43%;
+  left: 45%;
+  transform: rotate(45deg);
+  animation: beat 2s infinite;
+}
+@keyframes beat {
+  50% {
+    transform: rotate(45deg) scale(1.5);
+  }
+}
+.heart-l,
+.heart-r {
+  width: 70px;
+  height: 40px;
+  position: relative;
+  background-color: white;
+  border-radius: 40px 40px 0px 0px;
+}
+.heart-l {
+  bottom: 38px;
+}
+.heart-r {
+  bottom: 25px;
+  left: -53px;
+  transform: rotate(-90deg);
+}

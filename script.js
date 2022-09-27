@@ -11,6 +11,7 @@ const projects = [
   { name: 'progress_bar' },
   { name: 'mail_open' },
   { name: 'santa_claus' },
+  { name: 'christmas_bells' },
 ]
 const list = document.getElementById('list')
 

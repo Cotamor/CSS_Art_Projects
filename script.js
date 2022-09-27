@@ -9,6 +9,7 @@ const projects = [
   { name: 'heartbeat' },
   { name: 'battery' },
   { name: 'progress_bar' },
+  { name: 'mail_open' },
 ]
 const list = document.getElementById('list')
 

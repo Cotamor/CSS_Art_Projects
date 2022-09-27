@@ -1,0 +1,104 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #586c92;
+}
+.mycanvas {
+  height: 450px;
+  width: 400px;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  transform: rotate(10deg);
+  animation: nod 4s infinite;
+}
+@keyframes nod {
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+.santa {
+  position: relative;
+  top: 160px;
+  left: 90px;
+}
+.beard {
+  background-color: white;
+  height: 220px;
+  width: 220px;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(225deg);
+  position: relative;
+}
+.face {
+  background-color: #ffdab5;
+  width: 160px;
+  height: 60px;
+  border-radius: 40px;
+  position: relative;
+  left: 30px;
+  bottom: 190px;
+}
+.eye-l,
+.eye-r {
+  width: 30px;
+  height: 15px;
+  border-top: 8px solid #262626;
+  border-radius: 50% 50% 0 0;
+  position: relative;
+}
+.eye-l {
+  top: 23px;
+  left: 30px;
+}
+.eye-r {
+  top: 0px;
+  left: 100px;
+}
+.nose {
+  background-color: #ffdab5;
+  width: 34px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  left: 63px;
+  top: 5px;
+}
+.mouth {
+  background-color: #262626;
+  width: 40px;
+  height: 25px;
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  left: 60px;
+  top: 20px;
+  opacity: 0.8;
+}
+
+.hat {
+  background-color: tomato;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  left: 35px;
+  bottom: 420px;
+  border-radius: 0 200px 0 0;
+}
+.bottom {
+  background-color: white;
+  width: 170px;
+  height: 40px;
+  border-radius: 30px;
+  position: relative;
+  top: 140px;
+  right: 10px;
+}
+.top {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 54px;
+  right: 22px;
+}

@@ -47,10 +47,10 @@ body {
   bottom: 300px;
   transform-origin: top;
 }
-.envelop .cover {
+.envelop:hover .cover {
   transform: rotateX(180deg);
   z-index: -1;
 }
-.envelop .letter {
+.envelop:hover .letter {
   transform: translateY(-50px);
 }

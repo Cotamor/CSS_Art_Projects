@@ -1,0 +1,42 @@
+body {
+  background-color: #333333;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.container {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+}
+.crc1,
+.crc {
+  height: 270px;
+  width: 40px;
+  border: 3px solid white;
+  position: relative;
+  border-radius: 50%;
+  transition: 2.5s linear;
+}
+.crc1 {
+  top: 15px;
+  left: 130px;
+}
+.crc {
+  bottom: 3px;
+  right: 3px;
+}
+.crc1:hover {
+  animation: spin 8s infinite linear forwards;
+  cursor: pointer;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.crc1:hover .crc {
+  transform: rotate(15deg);
+}

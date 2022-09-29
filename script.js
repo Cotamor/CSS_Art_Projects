@@ -13,6 +13,7 @@ const projects = [
   { name: 'santa_claus' },
   { name: 'christmas_bells' },
   { name: 'rainbow_heart' },
+  { name: 'hover_spinner' },
 ]
 const list = document.getElementById('list')
 

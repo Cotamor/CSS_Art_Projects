@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #586c92;
+  overflow: hidden;
 }
 .mycanvas {
   height: 450px;

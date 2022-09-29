@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oleo Script', cursive;
+  background-color: #343434;
+}
+.mycanvas {
+  height: 460px;
+  width: 460px;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+}
+.wreath {
+  background-color: transparent;
+  height: 300px;
+  width: 300px;
+  border: 52px solid #79ad36;
+  position: relative;
+  top: 28px;
+  left: 28px;
+  border-radius: 50%;
+}
+.bow {
+  position: relative;
+  bottom: 73px;
+  left: 21px;
+}
+.b1,
+.b2 {
+  background-color: #ff3535;
+  width: 100px;
+  height: 100px;
+  border-radius: 0 0 0 100px;
+  position: relative;
+}
+.b1 {
+  transform: rotate(45deg);
+}
+.b2 {
+  transform: rotate(-135deg);
+  bottom: 100px;
+  left: 150px;
+}
+.b3 {
+  background-color: #d82e2e;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 175px;
+  left: 100px;
+}
+.r1,
+.r2,
+.r3,
+.r4,
+.r5,
+.r6,
+.r7 {
+  background-color: #ff3535;
+  width: 62px;
+  height: 16px;
+  position: relative;
+  border-radius: 16px;
+}
+.r1 {
+  bottom: 235px;
+  right: 2px;
+  transform: rotate(45deg);
+}
+.r2 {
+  right: 56px;
+  bottom: 128px;
+  transform: rotate(0deg);
+}
+.r3 {
+  right: 10px;
+  transform: rotate(-45deg);
+  bottom: 17px;
+}
+.r4 {
+  top: 20px;
+  left: 119px;
+  transform: rotate(90deg);
+}
+.r5 {
+  bottom: 299px;
+  right: -241px;
+  transform: rotate(-45deg);
+}
+.r6 {
+  right: -295px;
+  bottom: 192px;
+  transform: rotate(0deg);
+}
+.r7 {
+  right: -244px;
+  transform: rotate(45deg);
+  bottom: 80px;
+}
+.txt1,
+.txt2 {
+  color: white;
+  font-size: 50px;
+  position: relative;
+  bottom: 280px;
+  text-transform: uppercase;
+  animation: blink 3s infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.txt1 {
+  left: 50px;
+}
+.txt2 {
+  left: 14px;
+}

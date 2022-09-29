@@ -16,6 +16,7 @@ const projects = [
   { name: 'hover_spinner' },
   { name: 'folding_loader' },
   { name: 'isometric_stack' },
+  { name: 'christmas_wreath' },
 ]
 const list = document.getElementById('list')
 

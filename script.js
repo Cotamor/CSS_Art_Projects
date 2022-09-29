@@ -15,6 +15,8 @@ const projects = [
   { name: 'rainbow_heart' },
   { name: 'hover_spinner' },
   { name: 'folding_loader' },
+  { name: 'folding_loader' },
+  { name: 'isometric_stack' },
 ]
 const list = document.getElementById('list')
 

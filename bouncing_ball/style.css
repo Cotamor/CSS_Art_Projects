@@ -1,0 +1,62 @@
+body {
+  padding: 0;
+  margin: 0;
+  /* overflow: hidden; */
+  background-color: #a2e9ef;
+}
+.mycanvas {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+}
+.ball {
+  background-color: firebrick;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  border-radius: 50%;
+  left: 225px;
+  top: 70px;
+  animation: bounce 0.9s infinite;
+}
+@keyframes bounce {
+  10% {
+    height: 55px;
+    width: 47px;
+  }
+
+  50% {
+    height: 30px;
+    width: 57px;
+    transform: translateY(240px);
+  }
+  75% {
+    height: 50px;
+    width: 57px;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.container {
+  height: 50px;
+  width: 57px;
+}
+.shadow {
+  background-color: rgba(8, 8, 8, 0.06);
+  height: 10px;
+  width: 65px;
+  border-radius: 50%;
+  position: relative;
+  top: 290px;
+  left: 220px;
+  z-index: -1;
+  animation: shrink 0.9s infinite;
+}
+@keyframes shrink {
+  50% {
+    transform: scaleX(0.7);
+  }
+}

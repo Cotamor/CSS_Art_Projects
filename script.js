@@ -18,6 +18,7 @@ const projects = [
   { name: 'isometric_stack' },
   { name: 'christmas_wreath' },
   { name: 'bouncing_ball' },
+  { name: 'thermometer' },
 ]
 const list = document.getElementById('list')
 

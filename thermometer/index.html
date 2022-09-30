@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thermometer Icon</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="fa" id="thermo"></div>
+    </div>
+    <script type="text/javascript">
+      function thermo() {
+        const i = document.getElementById('thermo')
+        i.innerHTML = '&#xf2cb;'
+        setTimeout(() => {
+          i.innerHTML = '&#xf2ca;'
+        }, 500)
+        setTimeout(() => {
+          i.innerHTML = '&#xf2c9;'
+        }, 1000)
+        setTimeout(() => {
+          i.innerHTML = '&#xf2c8;'
+        }, 1500)
+        setTimeout(() => {
+          i.innerHTML = '&#xf2c7;'
+        }, 2000)
+      }
+      thermo()
+      setInterval(thermo, 2500)
+    </script>
+  </body>
+</html>
+<!-- thermometer-empty -quarter -half -three-quarter -full -->

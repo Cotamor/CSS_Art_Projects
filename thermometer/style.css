@@ -1,0 +1,15 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background-color: #ffe773;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div {
+  font-size: 250px;
+}

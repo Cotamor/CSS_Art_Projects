@@ -19,6 +19,7 @@ const projects = [
   { name: 'christmas_wreath' },
   { name: 'bouncing_ball' },
   { name: 'thermometer' },
+  { name: 'sunset_beach' },
 ]
 const list = document.getElementById('list')
 

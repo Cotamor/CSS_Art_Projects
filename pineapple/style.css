@@ -1,0 +1,204 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #fcf8bb;
+}
+
+.mycanvas {
+  height: 350px;
+  width: 350px;
+  /* border: 1px solid black; */
+  position: absolute;
+  margin: auto;
+  inset: 0;
+}
+.pineapple {
+  background-color: #ffaa00;
+  height: 180px;
+  width: 140px;
+  border-radius: 65px;
+  position: absolute;
+  top: 100px;
+  inset-inline: 0;
+  margin: auto;
+  background-image: repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 40px,
+      #ff9700 40px,
+      #ff9700 52px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 40px,
+      #ff9700 40px,
+      #ff9700 52px
+    );
+  background-size: 200% 200%;
+  background-position: 0px 0px;
+  animation: jump 0.5s infinite;
+}
+@keyframes jump {
+  50% {
+    top: 95px;
+  }
+}
+.pineapple::before,
+.pineapple::after {
+  position: absolute;
+  content: '';
+  background-color: #ffaa00;
+  height: 80px;
+  width: 30px;
+  border-radius: 30px;
+  z-index: -1;
+  top: 22px;
+  transform-origin: bottom;
+}
+.pineapple::before {
+  left: 13px;
+  transform: rotate(-45deg);
+  animation: hand-l 0.5s infinite;
+}
+.pineapple::after {
+  right: 13px;
+  transform: rotate(45deg);
+  animation: hand-r 0.5s infinite;
+}
+@keyframes hand-l {
+  50% {
+    transform: rotate(-38deg);
+  }
+}
+@keyframes hand-r {
+  50% {
+    transform: rotate(38deg);
+  }
+}
+.leaf {
+  position: absolute;
+  background-color: #498725;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px 0;
+  transform: rotate(135deg);
+  bottom: 180px;
+  margin: auto;
+  inset-inline: 0;
+  z-index: -1;
+  /* animation: leaves 0.5s infinite; */
+}
+@keyframes leaves {
+  50% {
+    transform: rotate(135deg) translate(6px, -6px);
+  }
+}
+.leaf::before,
+.leaf::after {
+  position: absolute;
+  content: '';
+  height: 70px;
+  width: 70px;
+  border-radius: 70px 0;
+  transform-origin: right;
+}
+.leaf::before {
+  background-color: #497b49;
+  top: -5px;
+  left: 20px;
+  transform: rotate(-40deg);
+  /* animation: leaf-left 0.5s infinite; */
+}
+@keyframes leaf-left {
+  50% {
+    transform: rotate(-27deg);
+  }
+}
+.leaf::after {
+  background-color: #497b49;
+  top: -5px;
+  right: 20px;
+  transform: rotate(40deg);
+  /* animation: leaf-right 0.5s infinite; */
+}
+@keyframes leaf-right {
+  50% {
+    transform: rotate(27deg);
+  }
+}
+.left-leg,
+.right-leg {
+  background-color: #ffaa00;
+  height: 70px;
+  width: 30px;
+  position: absolute;
+  border-radius: 30px;
+  bottom: -25px;
+  z-index: -1;
+}
+.left-leg {
+  left: 30px;
+  animation: run 0.6s infinite;
+}
+.right-leg {
+  right: 30px;
+  animation: run 0.6s 0.3s infinite;
+}
+@keyframes run {
+  50% {
+    transform: translateY(10px);
+  }
+}
+.eye-left,
+.eye-right {
+  background-color: black;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  top: 65px;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  20% {
+    transform: scaleY(0.3);
+  }
+  25% {
+    transform: scaleY(1);
+  }
+}
+.eye-left {
+  left: 30px;
+}
+.eye-right {
+  right: 30px;
+}
+.mouth {
+  height: 20px;
+  width: 30px;
+  background-color: #1e1e1e;
+  border-radius: 0 0 30px 30px;
+  position: absolute;
+  top: 100px;
+  margin: auto;
+  inset-inline: 0;
+}
+.shadow {
+  position: absolute;
+  background-color: rgba(30, 30, 30, 0.05);
+  height: 30px;
+  width: 160px;
+  bottom: 18px;
+  border-radius: 100%;
+  margin: auto;
+  inset-inline: 0;
+  z-index: -2;
+  animation: shrink 0.5s infinite;
+}
+@keyframes shrink {
+  50% {
+    transform: scaleX(0.85);
+  }
+}

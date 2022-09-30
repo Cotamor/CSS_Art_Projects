@@ -20,6 +20,7 @@ const projects = [
   { name: 'bouncing_ball' },
   { name: 'thermometer' },
   { name: 'sunset_beach' },
+  { name: 'pineapple' },
 ]
 const list = document.getElementById('list')
 

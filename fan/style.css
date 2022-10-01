@@ -15,6 +15,7 @@ body {
   position: absolute;
   margin: auto;
   inset: 0;
+  caret-color: transparent;
   /* border: 1px solid #ffffff; */
 }
 label {
@@ -27,6 +28,7 @@ label {
   inset-inline: 0;
   animation: spin 0.5s infinite linear;
   animation-play-state: paused;
+  cursor: pointer;
 }
 @keyframes spin {
   100% {

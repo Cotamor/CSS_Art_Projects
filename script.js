@@ -23,6 +23,7 @@ const projects = [
   { name: 'pineapple' },
   { name: 'pulse' },
   { name: 'battery_element' },
+  { name: 'fan' },
 ]
 const list = document.getElementById('list')
 

@@ -1,0 +1,69 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #282823;
+}
+.battery {
+  height: 110px;
+  width: 225px;
+  border: 8px solid #ffffff;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  border-radius: 8px;
+}
+.battery::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 30px;
+  background-color: #ffffff;
+  margin: auto;
+  inset-block: 0;
+  border-radius: 0 5px 5px 0;
+  right: -18px;
+}
+.battery::after {
+  position: absolute;
+  content: '';
+  height: 88px;
+  width: 44px;
+  background-color: #ffffff;
+  margin: auto;
+  inset-block: 0;
+  left: 7px;
+  border-radius: 5px;
+  box-shadow: 50px 0 transparent, 100px 0 transparent, 150px 0 transparent;
+  animation: charge 4s infinite;
+}
+
+@keyframes charge {
+  22% {
+    box-shadow: 50px 0 transparent, 100px 0 transparent, 150px 0 transparent;
+  }
+  25% {
+    box-shadow: 50px 0 #ffffff, 100px 0 transparent, 150px 0 transparent;
+  }
+
+  47% {
+    box-shadow: 50px 0 #ffffff, 100px 0 transparent, 150px 0 transparent;
+  }
+  50% {
+    box-shadow: 50px 0 #ffffff, 100px 0 #ffffff, 150px 0 transparent;
+  }
+  72% {
+    box-shadow: 50px 0 #ffffff, 100px 0 #ffffff, 150px 0 transparent;
+  }
+  75% {
+    box-shadow: 50px 0 #ffffff, 100px 0 #ffffff, 150px 0 #ffffff;
+  }
+  97% {
+    box-shadow: 50px 0 #ffffff, 100px 0 #ffffff, 150px 0 #ffffff;
+  }
+}

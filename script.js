@@ -25,6 +25,7 @@ const projects = [
   { name: 'battery_element' },
   { name: 'fan' },
   { name: 'rocket_and_moon' },
+  { name: 'coffee_maker' },
 ]
 const list = document.getElementById('list')
 

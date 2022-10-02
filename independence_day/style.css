@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #262626;
+  overflow: hidden;
+}
+.container {
+  height: 700px;
+  width: 700px;
+  /* background-color: orange; */
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  clip-path: url(#map-path);
+}
+svg {
+  height: 0;
+  width: 0;
+}
+.color-orange,
+.color-green {
+  position: absolute;
+  width: 100%;
+  height: 39%;
+  left: 0;
+  animation: slide-right 6s;
+}
+.color-orange {
+  top: 0;
+  background: linear-gradient(#fec200, #ff8a00);
+}
+.color-green {
+  bottom: 0;
+  background: linear-gradient(#4cc701, #0a8d03);
+}
+@keyframes slide-right {
+  0% {
+    left: -100%;
+  }
+}
+
+.color-white {
+  top: 39%;
+  position: absolute;
+  width: 100%;
+  height: 22%;
+  right: 0;
+  background-color: white;
+  animation: slide-left 6s;
+}
+@keyframes slide-left {
+  0% {
+    right: -100%;
+  }
+}
+#ashoka-chakra {
+  position: absolute;
+  margin: auto;
+  height: 120px;
+  width: 120px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -150px;
+  animation: spin 3s 4.2s forwards;
+  transform: scale(0);
+}
+@keyframes spin {
+  80% {
+    transform: scale(1.6) rotate(360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}

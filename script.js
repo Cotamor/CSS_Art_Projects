@@ -27,6 +27,7 @@ const projects = [
   { name: 'rocket_and_moon' },
   { name: 'coffee_maker' },
   { name: 'independence_day' },
+  { name: 'submarine' },
 ]
 const list = document.getElementById('list')
 

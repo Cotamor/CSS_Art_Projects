@@ -28,6 +28,7 @@ const projects = [
   { name: 'coffee_maker' },
   { name: 'independence_day' },
   { name: 'submarine' },
+  { name: 'sleeping_cat' },
 ]
 const list = document.getElementById('list')
 

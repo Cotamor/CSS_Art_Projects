@@ -1,0 +1,321 @@
+:root {
+  --primary: #ff7a00;
+  --primaryDark: #bb5a00;
+  --beige: #ffcb99;
+  --secondary: #6059c1;
+  --secondaryDark: #0f0c2a;
+  --black: #09081a;
+  --white: #eeeeee;
+  --cauldron: #212121;
+  --herb: #1f8c26;
+  --bkg: #763b58;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--bkg);
+}
+.container {
+  position: absolute;
+  width: 320px;
+  height: 480px;
+  /* border: 1px solid white; */
+  margin: auto;
+  inset: 0;
+}
+.witch {
+  position: relative;
+  top: 130px;
+}
+.hair {
+  position: absolute;
+  width: 70px;
+  border-bottom: 58px solid var(--primary);
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  margin: auto;
+  inset-inline: 0;
+}
+.hat {
+  position: absolute;
+  width: 120px;
+  height: 30px;
+  background-color: var(--black);
+  border-radius: 50%;
+  bottom: -9px;
+  left: -22px;
+}
+.hat::before {
+  position: absolute;
+  content: '';
+  border-bottom: 74px solid var(--black);
+  border-right: 35px solid transparent;
+  border-left: 35px solid transparent;
+  bottom: 22px;
+  left: 22px;
+}
+.hat::after {
+  position: absolute;
+  content: '';
+  border-left: 31px solid var(--black);
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  bottom: 74px;
+  left: 54px;
+  transform: rotate(10deg);
+}
+.face {
+  position: absolute;
+  width: 65px;
+  height: 54px;
+  background-color: var(--beige);
+  border-radius: 0 0 60px 60px;
+  top: 13px;
+  left: 3px;
+  z-index: 1;
+}
+.eye {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  box-shadow: 0px -2px 0 5px var(--secondaryDark), 30px 0 0 0 var(--secondary),
+    30px -2px 0 5px var(--secondaryDark);
+  top: 15px;
+  left: 15px;
+}
+.mouth {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: var(--black);
+  border-radius: 2px;
+  top: 32px;
+  right: 18px;
+}
+.mouth::before,
+.mouth::after {
+  position: absolute;
+  content: '';
+  border-top: 6px solid var(--white);
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  top: 2px;
+}
+.mouth::after {
+  left: 21px;
+}
+.cloak {
+  position: relative;
+  width: 70px;
+  border-bottom: 150px solid var(--secondaryDark);
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  margin: auto;
+  inset-inline: 0;
+  top: -2px;
+}
+.hand-l {
+  position: relative;
+  width: 20px;
+  height: 60px;
+  background-color: var(--secondaryDark);
+  bottom: -12px;
+  left: -6px;
+  transform: rotate(-80deg);
+  animation: swing 2s infinite;
+  transform-origin: bottom;
+}
+@keyframes swing {
+  50% {
+    transform: rotate(-60deg);
+  }
+}
+.hand-l::before {
+  position: absolute;
+  content: '';
+  width: 18px;
+  height: 20px;
+  border-radius: 50% 50% 0 0;
+  background-color: var(--beige);
+  top: -20px;
+  left: 1px;
+}
+.hand-l::after {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50% 50% 0 0;
+  background-color: var(--beige);
+  top: -10px;
+  left: 8px;
+}
+.stick {
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background-color: var(--primaryDark);
+  border-radius: 10px;
+  transform: rotate(87deg);
+  top: -51px;
+  left: 39px;
+}
+.hand-r {
+  position: absolute;
+  width: 20px;
+  height: 60px;
+  background-color: var(--secondaryDark);
+  bottom: -62px;
+  left: 67px;
+  transform: rotate(-30deg);
+}
+.hand-r::before {
+  position: absolute;
+  content: '';
+  width: 18px;
+  height: 20px;
+  border-radius: 0 0 50% 50%;
+  background-color: var(--beige);
+  bottom: -20px;
+  left: 1px;
+}
+.stick2 {
+  position: absolute;
+  width: 13px;
+  height: 150px;
+  background-color: var(--primaryDark);
+  border-radius: 15px;
+  margin: auto;
+  inset-inline: 0;
+  transform-origin: bottom;
+  transform: rotate(15deg);
+  animation: stir 4s infinite;
+  bottom: 97px;
+}
+@keyframes stir {
+  50% {
+    transform: rotate(-15deg);
+  }
+}
+.bubble-1 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--herb);
+  opacity: 0.8;
+  bottom: 160px;
+  left: 140px;
+  animation: bub-1-rise 4s 1s infinite;
+}
+@keyframes bub-1-rise {
+  100% {
+    opacity: 0;
+    transform: translateY(-67px) translateX(-10px);
+  }
+}
+.bubble-2 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--herb);
+  opacity: 0.9;
+  bottom: 170px;
+  left: 170px;
+  animation: bub-2-rise 5s 1s infinite;
+}
+@keyframes bub-2-rise {
+  100% {
+    opacity: 0;
+    transform: translateY(-57px) translateX(15px);
+  }
+}
+.cauldron {
+  position: relative;
+  background-color: var(--cauldron);
+  width: 160px;
+  height: 130px;
+  border-radius: 40% 40% 50% 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70px;
+}
+.cauldron::before {
+  position: absolute;
+  content: '';
+  width: 170px;
+  height: 35px;
+  background-color: var(--cauldron);
+  border-radius: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.handle {
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  border: 6px solid var(--cauldron);
+  border-radius: 30px;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.stand,
+.stand::before {
+  position: absolute;
+  width: 3px;
+  border-top: 15px solid var(--cauldron);
+  border-right: 7px solid transparent;
+  border-right-color: transparent;
+  border-right-style: solid;
+  border-right-width: 7px;
+  border-left: 7px solid transparent;
+}
+.stand {
+  top: 120px;
+  left: 34px;
+  transform: rotate(20deg);
+}
+.stand::before {
+  position: absolute;
+  content: '';
+  top: -44px;
+  left: 68px;
+  transform: rotate(-40deg);
+}
+.potion {
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  border-radius: 0 0 20px 20px;
+  background-color: var(--herb);
+  left: 105px;
+}
+.potion::before {
+  position: absolute;
+  content: '';
+  width: 14px;
+  height: 30px;
+  border-radius: 0 0 14px 14px;
+  background-color: var(--herb);
+  left: 25px;
+  opacity: 0.8;
+}
+.potion::after {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 20px;
+  border-radius: 40px 40px 0 0;
+  background-color: var(--herb);
+  left: -85px;
+  top: -20px;
+}

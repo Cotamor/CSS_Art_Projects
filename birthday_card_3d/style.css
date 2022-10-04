@@ -1,0 +1,164 @@
+:root {
+  --primary: #febf00;
+  --primaryDark: #d18f00;
+  --primaryLight: #fbd9a5;
+  --secondary: #954e0a;
+  --accent: #ed3916;
+  --accent2: #fba29b;
+  --white: #efefef;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: var(--primary);
+}
+.card {
+  width: 640px;
+  height: 400px;
+  /* border: 1px solid #ffffff; */
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+  transition: 1s;
+}
+.card:hover {
+  transform: rotate(-5deg);
+}
+.card:hover .outside {
+  transform: rotateY(-130deg);
+}
+.outside,
+.inside {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50.1%;
+}
+.inside {
+  background: linear-gradient(to right, #eaeaea, #ffffff 30%);
+  left: 50%;
+  line-height: 3;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  left: 50%;
+}
+.inside h1,
+.back h1 {
+  font-size: 105px;
+  line-height: 1;
+}
+
+.outside {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: 1;
+  transform-origin: left;
+  transition: 2s;
+  cursor: pointer;
+}
+.outside .front p {
+  font-size: 23px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 6px;
+  color: #000046;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+.front {
+  background-color: #ffffff;
+}
+.back {
+  transform: rotateY(180deg);
+  background: linear-gradient(to left, #eaeaea, #ffffff 30%);
+  line-height: 3;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cake {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+}
+.top-layer,
+.middle-layer,
+.bottom-layer {
+  height: 80px;
+  width: 240px;
+  background-color: pink;
+  background-size: 60px 100px;
+  background-position: 28px 0px;
+  background-image: linear-gradient(
+      transparent 50px,
+      var(--primaryLight) 50px,
+      var(--primaryLight) 60px,
+      transparent 60px
+    ),
+    radial-gradient(
+      circle at 30px 5px,
+      var(--secondary) 30px,
+      var(--primary) 31px
+    );
+  position: relative;
+  background-repeat: repeat;
+  border-radius: 10px 10px 0 0;
+  margin: auto;
+}
+.middle-layer {
+  transform: scale(0.85);
+  top: 6px;
+}
+.top-layer {
+  transform: scale(0.7);
+  top: 26px;
+}
+.candle {
+  height: 40px;
+  width: 16px;
+  position: absolute;
+  margin: auto;
+  inset-inline: 0;
+  top: 0px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--accent) 0,
+    var(--accent) 5px,
+    var(--accent2) 5px,
+    var(--accent2) 10px
+  );
+}
+.candle::before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  background-color: var(--primary);
+  margin: auto;
+  inset-inline: 0;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+  bottom: 39px;
+}

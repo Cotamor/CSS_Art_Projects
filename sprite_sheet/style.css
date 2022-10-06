@@ -11,14 +11,14 @@ body {
 }
 .container {
   position: absolute;
-  width: 400px;
-  height: 600px;
+  width: 220px;
+  height: 400px;
   /* border: 1px solid white; */
   margin: auto;
   inset: 0;
-  background: url(sprite-sheet.png);
+  background: url(dragon_egg2.jpg);
   /* Step should be equal to number of frames */
-  animation: kick 0.5s steps(6) infinite;
+  animation: kick 0.5s steps(7) infinite;
 }
 @keyframes kick {
   0% {
@@ -26,6 +26,7 @@ body {
   }
   /* Use height of image here as position */
   100% {
-    background-position: 0 -3600px;
+    /* background-position: 0 -3600px; */
+    background-position: 1600px 0;
   }
 }

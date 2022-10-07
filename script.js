@@ -36,6 +36,7 @@ const projects = [
   { name: 'sprite_sheet' },
   { name: 'cat_on_the_windowsill' },
   { name: '3d_cards' },
+  { name: 'bee' },
 ]
 const list = document.getElementById('list')
 

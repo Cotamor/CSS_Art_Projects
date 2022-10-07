@@ -32,14 +32,13 @@ body {
   height: 100px;
   border-radius: 100px;
   background-color: var(--bkg-light);
-  left: 50%;
-  top: 80px;
-  transform: translate(-50%, -50%);
-  animation: fly 4s infinite;
+  left: 20px;
+  top: 60px;
+  /* animation: fly 4s infinite; */
 }
 @keyframes fly {
   50% {
-    transform: translate(-50%, 150px);
+    transform: translateY(150px);
   }
 }
 
@@ -124,6 +123,37 @@ body {
   bottom: 0px;
   transform: translateX(-50%);
 }
+/* .antenna {
+  position: absolute;
+  width: 8px;
+  height: 50px;
+  background-color: var(--secondary);
+  top: -73px;
+  left: 173px;
+  transform: rotate(25deg);
+  z-index: -1;
+}
+.antenna::before {
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 50px;
+  background-color: var(--secondary);
+  top: 35px;
+  left: -60px;
+  transform: rotate(-50deg);
+}
+.antenna::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  left: -6px;
+  top: -7px;
+  box-shadow: -79px 40px var(--secondary);
+} */
 .antenna {
   position: absolute;
   width: 20px;

@@ -1,0 +1,100 @@
+:root {
+  --primary: #6725fd;
+  --primaryLight: #9f44f0;
+  --bkg: #151320;
+  --bkg_front: linear-gradient(to right, var(--primaryLight), var(--primary));
+  --bkg_back: #28253a;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bkg);
+  caret-color: transparent;
+  font-size: 16px;
+  font-family: 'Poppings', sans-serif;
+}
+section {
+  height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 0 4em;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+img {
+  width: 5em;
+}
+.icon {
+  font-size: 5em;
+}
+.container {
+  perspective: 1000px;
+  height: 28vh;
+  width: 100%;
+  cursor: pointer;
+}
+.card {
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+}
+.front,
+.back {
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 0.5em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+}
+.front {
+  background: var(--bkg_front);
+}
+/* .content {
+  transform: translateZ(60px);
+} */
+.content h3 {
+  font-size: 22px;
+  margin-top: 1em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.content p {
+  font-size: 14px;
+  padding: 0 3em;
+  line-height: 2em;
+}
+.back {
+  background-color: var(--bkg_back);
+  transform: rotateX(180deg);
+}
+.container:hover .card {
+  transform: rotateX(180deg);
+}
+
+@media screen and (min-width: 992px) {
+  section {
+    padding: 0 1em;
+  }
+  .container {
+    flex-basis: 0 0 33.33%;
+    max-width: 33.3%;
+    padding: 0 1.5em;
+  }
+}

@@ -1,0 +1,89 @@
+:root {
+  --primary: #fa9a22;
+  --primaryLight: #fbd383;
+  --primaryBubble: #fbbe08;
+  --bkg: #faf0ca;
+  --black: #030303;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bkg);
+  caret-color: transparent;
+  overflow: visible;
+}
+.cup {
+  position: absolute;
+  width: 210px;
+  height: 220px;
+  margin: auto;
+  inset: 0;
+  background: url(coffee-img-1.svg), url(coffee-img-2.svg);
+  background-position: 0 0, 0 0;
+  border: 10px solid var(--black);
+  background-repeat: repeat-x;
+  border-radius: 10% 10% 30% 30%;
+  animation: coffee 8s infinite linear;
+}
+@keyframes coffee {
+  100% {
+    background-position: -100% 0, -100% 0;
+  }
+}
+.cup::before {
+  position: absolute;
+  content: '';
+  width: 70px;
+  height: 90px;
+  border: 10px solid var(--black);
+  border-radius: 0 30px 80px 0;
+  top: 30px;
+  left: 100%;
+}
+.cup::after {
+  position: absolute;
+  content: '';
+  width: 300px;
+  height: 10px;
+  background-color: var(--black);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+.bubble {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--primaryBubble);
+  border-radius: 50%;
+  animation: rise infinite forwards;
+}
+@keyframes rise {
+  100% {
+    opacity: 0;
+    transform: translateY(-130px);
+  }
+}
+.bubble-1 {
+  bottom: 10%;
+  left: 15%;
+  animation-delay: 0.5s;
+  animation-duration: 3s;
+}
+.bubble-2 {
+  bottom: 15%;
+  left: 45%;
+  animation-delay: 1.2s;
+  animation-duration: 4s;
+}
+.bubble-3 {
+  bottom: 23%;
+  right: 15%;
+  animation-duration: 4s;
+}

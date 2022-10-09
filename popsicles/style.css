@@ -1,0 +1,82 @@
+:root {
+  --strawberry: #ff0565;
+  --strawberryLight: #ff7eaf;
+  --banana: #ffba00;
+  --bananaChoco: #521a01;
+  --chocolate: #5e3a16;
+  --armond: #c19869;
+  --stick: #dba55b;
+  --bkg: #f8db94;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+body {
+  background-color: var(--bkg);
+  caret-color: transparent;
+}
+.container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  /* border: 1px solid black; */
+  margin: auto;
+  inset: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.popsicle {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  top: 20%;
+  border-radius: 100px 100px 20px 20px;
+}
+.popsicle::before {
+  position: absolute;
+  content: '';
+  width: 17px;
+  height: 90px;
+  background: var(--stick);
+  border-radius: 0 0 17px 17px;
+  top: 145px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.popsicle::after {
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  right: 10px;
+  top: 22%;
+}
+.popsicle-1 {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--strawberry) 0px,
+    var(--strawberry) 10px,
+    var(--strawberryLight) 10px,
+    var(--strawberryLight) 20px
+  );
+}
+.popsicle-2 {
+  background-size: 33px 153px;
+  background-image: radial-gradient(
+    circle at 16px 21px,
+    var(--bananaChoco) 40px,
+    var(--banana) 41px
+  );
+}
+.popsicle-3 {
+  background-color: var(--chocolate);
+  background-image: radial-gradient(var(--armond) 2px, transparent 2px);
+  background-size: 16.5px 16.5px;
+}

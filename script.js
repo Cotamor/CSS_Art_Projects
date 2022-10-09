@@ -40,6 +40,7 @@ const projects = [
   { name: 'waves' },
   { name: 'tea_cup' },
   { name: 'cat_and_mouse' },
+  { name: 'sleepy_owl' },
 ]
 const list = document.getElementById('list')
 

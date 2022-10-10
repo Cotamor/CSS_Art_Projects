@@ -34,7 +34,7 @@ body {
   background-color: var(--bkg-light);
   left: 20px;
   top: 60px;
-  /* animation: fly 4s infinite; */
+  animation: fly 4s infinite;
 }
 @keyframes fly {
   50% {

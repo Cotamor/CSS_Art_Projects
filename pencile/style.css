@@ -1,0 +1,72 @@
+:root {
+  --primary: #f26c37;
+  --primary2: #eb852c;
+  --primary3: #f19f22;
+  --secondary: #f4c09b;
+  --accent: #ed3569;
+  --gray: #d2dfe8;
+  --black: #0d2436;
+  --white: #fefefe;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #262626;
+  caret-color: transparent;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.pencile {
+  position: absolute;
+  width: 160px;
+  height: 320px;
+  border: 3px solid white;
+  border-radius: 0 160px 160px 0;
+  border-left: none;
+  left: 50%;
+  transform-origin: 0 50%;
+  animation: spin 8s infinite linear;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pencile::before {
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 260px;
+  border-radius: 10px 10px 0 0;
+  top: 0;
+  background: linear-gradient(var(--accent) 60%, var(--gray) 60%) no-repeat,
+    linear-gradient(
+      to right,
+      var(--primary) 33.33%,
+      var(--primary2) 33.33%,
+      var(--primary2) 66.66%,
+      var(--primary3) 66.66%
+    );
+  background-size: 100% 40%, 100% 60%;
+  background-position: 0 0, 0 100%;
+  top: -3px;
+  left: -30px;
+}
+.pencile::after {
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 60px;
+  background-color: var(--secondary);
+  background: linear-gradient(var(--secondary) 70%, var(--white) 70%);
+  bottom: -3px;
+  left: -30px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}

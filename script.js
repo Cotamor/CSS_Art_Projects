@@ -44,6 +44,8 @@ const projects = [
   { name: 'popsicles' },
   { name: 'pencile' },
   { name: 'paint_roller' },
+  { name: 'neumorphic_loader' },
+  { name: 'frog' },
 ]
 const list = document.getElementById('list')
 

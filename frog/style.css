@@ -14,7 +14,6 @@
 *::before {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
 }
 body {
   background-color: var(--bkg);
@@ -26,178 +25,167 @@ body {
   height: 320px;
   margin: auto;
   inset: 0;
-  /* border: 1px solid black; */
-}
-.frog {
-  position: relative;
-  width: 100px;
-  height: 90px;
-  background-color: var(--primary);
-  border-radius: 100px 100px 0 0;
-  margin: auto;
-  inset-inline: 0;
-  top: 150px;
-}
-.frog::before {
-  position: absolute;
-  content: '';
-  width: 60px;
-  height: 60px;
-  background-color: var(--primaryLight);
-  border-radius: 70px 70px 0 0;
-  margin: auto;
-  inset-inline: 0;
-  bottom: 0px;
-}
-.hand {
-  position: absolute;
-  width: 40px;
-  height: 20px;
-  background-color: var(--primary);
-  bottom: -10px;
-  border-radius: 0 14px 0 14px;
-}
-.hand-r {
-  right: 0px;
-  transform: rotateY(180deg);
-}
-.leg {
-  position: absolute;
-  width: 50px;
-  height: 90px;
-  border-radius: 50%;
-  background-color: var(--primaryDark);
-  bottom: -9px;
-  left: -20px;
-  transform: rotate(-30deg);
-  z-index: -1;
-}
-.leg::before {
-  position: absolute;
-  content: '';
-  width: 40px;
-  height: 20px;
-  border-radius: 40px 40px 0 0;
-  background-color: var(--primaryDark);
-  bottom: 9px;
-  left: -12px;
-  transform: rotate(30deg);
-}
-.leg-r {
-  transform: rotate(30deg) rotateY(180deg);
-  left: 70px;
 }
 .face {
   position: relative;
-  width: 140px;
-  height: 100px;
+  width: 160px;
+  height: 120px;
   background-color: var(--primary);
   border-radius: 50%;
-  top: -80px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
 }
-.eye {
-  position: absolute;
-  width: 52px;
-  height: 52px;
-  background-color: var(--primary);
-  border-radius: 50%;
-  top: -15px;
-  display: grid;
-  place-items: center;
-}
-.eye-l {
-  left: 10px;
-}
-.eye-r {
-  right: 10px;
-}
-.eyeball {
-  width: 38px;
-  height: 38px;
-  background-color: var(--white);
-  border-radius: 50%;
-}
-.eyeball::before {
+.face::before {
   position: absolute;
   content: '';
-  width: 23px;
-  height: 23px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--primaryDeep);
-  border-radius: 50%;
-}
-.mouth {
-  position: absolute;
-  width: 100px;
-  height: 50px;
+  width: 120px;
+  height: 55px;
   background-color: var(--primaryLight);
-  border-radius: 0 0 100px 100px;
+  border-radius: 0 0 55px 55px;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0px;
+  bottom: 10px;
   z-index: 1;
 }
-.mouth::before {
+.face::after {
   position: absolute;
   content: '';
-  width: 110px;
+  width: 130px;
   height: 8px;
+  background-color: var(--primaryDark);
   border-radius: 8px;
   left: 50%;
   transform: translateX(-50%);
+  top: 55px;
+  z-index: 1;
+}
+.eyes,
+.eyes::before {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--black);
+  box-shadow: 0 0 0 10px var(--white), 0 0 0 16px var(--primary);
+}
+.eyes {
+  left: 30px;
+}
+.eyes::before {
+  content: '';
+  left: 70px;
+}
+.body {
+  position: absolute;
+  width: 60px;
+  height: 70px;
+  background-color: var(--primaryLight);
+  left: 50%;
+  border-radius: 70px 70px 0 0;
+  box-shadow: 0 -20px 0 20px var(--primary);
+  transform: translateX(-50%);
+  top: 180px;
+}
+.body::before,
+.body::after {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 25px;
+  background-color: var(--primary);
+  top: 58px;
+}
+.body::before {
+  border-radius: 0 16px 0 16px;
+  left: -20px;
+}
+.body::after {
+  border-radius: 16px 0 16px 0;
+  left: 40px;
+}
+.leg-l,
+.leg-r {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  border-radius: 50%;
   background-color: var(--primaryDark);
+  top: 180px;
+}
+.leg-l {
+  left: 90px;
+  transform: rotate(-30deg);
+}
+.leg-r {
+  right: 90px;
+  transform: rotate(30deg);
+}
+.leg-l::before,
+.leg-r::before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 20px;
+  background-color: var(--primaryDark);
+  border-radius: 40px 40px 0 0;
+  bottom: 5px;
+}
+.leg-l::before {
+  left: -20px;
+  transform: rotate(30deg);
+}
+.leg-r::before {
+  right: -20px;
+  transform: rotate(-30deg);
 }
 .tongue {
   position: absolute;
-  height: 0px;
   width: 8px;
+  height: 0px;
   background-color: var(--accent);
+  bottom: 55px;
+  left: 70px;
   border-radius: 8px;
-  bottom: 30px;
-  left: 66px;
-  /* z-index: 3; */
-  transform: rotate(-45deg);
   transform-origin: 100% 100%;
+  transform: rotate(-45deg);
   animation: tongue 3s infinite linear;
 }
 @keyframes tongue {
-  5% {
-    height: 130px;
-  }
-  10% {
+  6% {
     height: 130px;
   }
   25% {
+    height: 130px;
+  }
+  35% {
     height: 0px;
   }
 }
 .tongue::before {
   position: absolute;
   content: '';
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  left: -1px;
+  width: 12px;
+  height: 12px;
   opacity: 0;
+  left: -1px;
   background-color: var(--black);
-  box-shadow: -8px -5px var(--gray), 8px -5px var(--gray);
+  border-radius: 50%;
+  box-shadow: 7px -4px 0 var(--gray), -7px -4px 0 var(--gray);
   animation: fly 3s infinite linear;
 }
+
 @keyframes fly {
-  4% {
+  5% {
     opacity: 0;
   }
-  5% {
+  6% {
     opacity: 1;
   }
-  20% {
+  32% {
     opacity: 1;
   }
-  21% {
+  33% {
     opacity: 0;
   }
 }

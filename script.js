@@ -50,6 +50,7 @@ const projects = [
   { name: 'moon' },
   { name: 'baby_chick' },
   { name: 'harry_potter' },
+  { name: 'dragon' },
 ]
 const list = document.getElementById('list')
 

@@ -49,6 +49,7 @@ const projects = [
   { name: 'day_night_animation' },
   { name: 'moon' },
   { name: 'baby_chick' },
+  { name: 'harry_potter' },
 ]
 const list = document.getElementById('list')
 

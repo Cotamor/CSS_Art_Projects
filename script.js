@@ -52,6 +52,7 @@ const projects = [
   { name: 'harry_potter' },
   { name: 'dragon' },
   { name: 'ticktock' },
+  { name: 'rabbit' },
 ]
 const list = document.getElementById('list')
 

@@ -1,0 +1,251 @@
+:root {
+  --primary: #d7dfe7;
+  --primaryDark: #b5becd;
+  --accent: #cd92b4;
+  --carrot: #e78f1d;
+  --leaf: #9eb42e;
+  --leafLight: #c9cf55;
+  --bkg: #e25a61;
+  --bkgDark: #a94349;
+  --fontColor: #4f1f22;
+  --black: #232323;
+  --white: #fefefe;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bkg);
+  caret-color: transparent;
+}
+.container {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  inset: 0;
+  /* border: 1px solid white; */
+}
+.rabbit-body {
+  position: absolute;
+  width: 300px;
+  height: 120px;
+  background-color: var(--primary);
+  border-radius: 120px 120px 0 0;
+  top: 240px;
+  left: 100px;
+  background: radial-gradient(
+    circle at 0% 50%,
+    var(--primaryDark),
+    var(--primaryDark) 60%,
+    var(--primary) 61%
+  );
+  z-index: -2;
+}
+.tail {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px 50px 50px 0;
+  background-color: var(--white);
+  right: 60px;
+  top: 310px;
+  z-index: -3;
+}
+.face-container {
+  transform-origin: top left;
+  animation: snooze 5s infinite;
+}
+
+@keyframes snooze {
+  50% {
+    transform: rotate(-6deg);
+  }
+}
+
+.rabbit-face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  top: -40px;
+  left: 10px;
+}
+.rabbit-face::before {
+  position: absolute;
+  content: '';
+  width: 170px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: var(--primary);
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+}
+.ear,
+.ear::before {
+  position: absolute;
+  width: 30px;
+  height: 100px;
+  background-color: var(--accent);
+  border-radius: 30px 30px 0 0;
+  border: 5px solid var(--primary);
+  z-index: -1;
+}
+.ear {
+  top: -60px;
+  left: 10px;
+}
+.ear::before {
+  content: '';
+  top: -5px;
+  left: 90px;
+}
+.eye-l,
+.eye-r {
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  border-radius: 0 0 12px 12px;
+  border: 4px solid var(--black);
+  border-top: none;
+  top: 70px;
+}
+.eye-l {
+  left: 30px;
+}
+.eye-r {
+  right: 30px;
+}
+.mouth {
+  position: absolute;
+  width: 30px;
+  height: 24px;
+  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+  background-color: var(--white);
+  top: 85px;
+  margin: auto;
+  inset-inline: 0;
+}
+.mouth::before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 12px;
+  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+  background-color: var(--black);
+  margin: auto;
+  inset-inline: 0;
+}
+.hand-l,
+.hand-r {
+  position: absolute;
+  width: 70px;
+  height: 35px;
+  border-radius: 12px 12px 0 0;
+  bottom: 0px;
+}
+.hand-l {
+  background-color: var(--primaryDark);
+  left: -10px;
+}
+.hand-r {
+  background-color: var(--white);
+  left: 110px;
+}
+.hand-l::before,
+.hand-r::before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 25px;
+  border-radius: 8px 8px 0 0;
+  bottom: 0px;
+}
+.hand-l::before {
+  left: 55px;
+  background-color: var(--white);
+}
+.hand-r::before {
+  right: 55px;
+  background-color: var(--primaryDark);
+}
+.carrot-container {
+  position: absolute;
+  transform: rotate(10deg);
+  top: 65px;
+  left: -15px;
+}
+.carrot {
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  background-color: var(--carrot);
+  border-radius: 25% 60% 60% 25% / 50% 50% 50% 50%;
+}
+.leaf,
+.leaf::before {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+}
+.leaf {
+  background-color: var(--leafLight);
+  border-radius: 20px 0;
+  top: 12px;
+  left: -22px;
+}
+.leaf::before {
+  content: '';
+  background-color: var(--leaf);
+  border-radius: 0 20px;
+  top: -10px;
+  left: 0px;
+  transform: rotate(10deg);
+}
+.shadow {
+  position: absolute;
+  width: 400px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+  bottom: 128px;
+  margin: auto;
+  inset-inline: 0;
+  z-index: -4;
+}
+.container span {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--fontColor);
+  animation: snore 8s infinite linear forwards;
+  z-index: -5;
+}
+@keyframes snore {
+  100% {
+    transform: translateY(-230px);
+    opacity: 0;
+  }
+}
+.container .z-1 {
+  top: 270px;
+  left: 140px;
+  animation-delay: 6.5s;
+}
+.container .z-2 {
+  top: 248px;
+  left: 162px;
+  animation-delay: 0.5s;
+}
+.container .z-3 {
+  top: 262px;
+  left: 193px;
+  animation-delay: 3.5s;
+}

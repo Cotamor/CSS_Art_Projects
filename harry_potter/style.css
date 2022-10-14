@@ -37,7 +37,7 @@ body {
   /* border: 1px solid white; */
   margin: auto;
   inset-block: 0;
-  /* animation: flying 5s infinite; */
+  animation: flying 5s infinite;
 }
 @keyframes flying {
   50% {

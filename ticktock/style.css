@@ -1,0 +1,97 @@
+:root {
+  --primary: #301167;
+  --accent: #f5de59;
+  --bkg: #1c1b36;
+  --gradient-color: #555acb;
+  --gradient-color1: #e0abee;
+  --gradient-color2: #4756c6;
+  --gradient-color3: #ae76f1;
+  --gradient-color4: #e9b6ed;
+  --gradient1: linear-gradient(to right, #555acb, #e0abee);
+  --gradient2: linear-gradient(45deg, #4756c6, #ae76f1, #e9b6ed);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--bkg);
+  height: 100vh;
+  caret-color: transparent;
+}
+.container {
+  position: absolute;
+  background: var(--gradient2);
+  width: 320px;
+  height: 280px;
+  margin: auto;
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.word {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 60px;
+  letter-spacing: 14px;
+}
+.word-1 {
+  top: 60px;
+  left: 26px;
+}
+.word-1 span:first-child {
+  margin-right: 0px;
+}
+.word-2 {
+  top: 140px;
+  right: 10px;
+}
+.word-2 span:last-child {
+  margin-left: 20px;
+}
+.pendulum {
+  position: absolute;
+  width: 10px;
+  height: 180px;
+  background-color: var(--accent);
+  transform-origin: top;
+  transform: rotate(15deg);
+  top: -10px;
+  left: 105px;
+  box-shadow: 0 0 20px rgba(0, 8, 57, 0.3);
+
+  animation: swing 2.5s ease-in-out infinite;
+}
+@keyframes swing {
+  50% {
+    transform: rotate(-15deg);
+  }
+}
+.pendulum::after {
+  position: absolute;
+  content: '';
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  /* background-color: red; */
+  border: 8px solid var(--accent);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 178px;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    transform: scale(1.2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    transform: scale(1.5);
+  }
+}

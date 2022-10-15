@@ -1,0 +1,317 @@
+:root {
+  --primary: #3bb8ef;
+  --primaryLight: #64c1f7;
+  --primaryDark: #1683ed;
+  --secondary: #e2e9f4;
+  --secondaryDark: #aec3d2;
+  --accent: #e52c1b;
+  --planet: #fad31e;
+  --planetDark: #edb514;
+  --planetLight: #fcec8e;
+  --bkg: #171640;
+  --bkgDark: #23224a;
+  --white: #fefefe;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--bkg);
+  caret-color: transparent;
+}
+.container {
+  font-size: 10px;
+  position: absolute;
+  width: 31.25em;
+  height: 31.25em;
+  margin: auto;
+  inset: 0;
+  border-radius: 50%;
+  background-color: var(--bkgDark);
+}
+.center {
+  transform: translateX(-50%);
+  left: 50%;
+}
+.planet {
+  position: absolute;
+  width: 12.5em;
+  height: 12.5em;
+  background-color: var(--planet);
+  border-radius: 50%;
+  left: 45%;
+  top: 10%;
+}
+.planet::before {
+  position: absolute;
+  content: '';
+  width: 2.345em;
+  height: 0.75em;
+  border-radius: 0.75em;
+  background-color: var(--planetDark);
+  top: 1.87em;
+  left: 2.81em;
+  box-shadow: 4.37em 8.12em 0 0.12em var(--planetDark),
+    -1.25em 3.12em 0 0.25em var(--planetDark);
+}
+.planet::after {
+  position: absolute;
+  content: '';
+  width: 6.25em;
+  height: 1.25em;
+  background-color: var(--planetLight);
+  border-radius: 1.25em;
+  top: 2.81em;
+  left: 4.37em;
+  box-shadow: 1.87em 3.12em 0 -0.18em var(--planetLight),
+    -1.87em 4.25em 0 0.09em var(--planetLight);
+}
+.shadow {
+  position: absolute;
+  width: 12.5em;
+  height: 12.5em;
+  /* background-color: red; */
+  border-radius: 50%;
+  box-shadow: inset -0.93em -0.93em 0 0 rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+.astronaut {
+  position: absolute;
+  width: 15.62em;
+  height: 17.5em;
+  top: 7.25em;
+  left: 5.93em;
+  z-index: 2;
+  transform: rotate(-30deg);
+  animation: float 5s infinite;
+}
+@keyframes float {
+  50% {
+    transform: translate(1.87em, 1.87em) rotate(-30deg);
+  }
+}
+
+.suit {
+  position: absolute;
+  width: 6.25em;
+  height: 6.25em;
+  background-color: var(--secondary);
+  border-radius: 10%;
+  top: 6.25em;
+}
+.helmet {
+  position: absolute;
+  width: 6.25em;
+  height: 5.62em;
+  background-color: var(--secondary);
+  border-radius: 45%;
+  top: -5.31em;
+}
+.helmet::before {
+  position: absolute;
+  content: '';
+  width: 4.8em;
+  height: 3.8em;
+  background-color: var(--primaryLight);
+  border-radius: 60% 60% 40% 40%;
+  top: 0.43em;
+  left: 0.73em;
+}
+.helmet::after {
+  position: absolute;
+  content: '';
+  width: 0.62em;
+  height: 0.62em;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 1.25em;
+  left: 1.5em;
+}
+.buttons {
+  position: absolute;
+  width: 3.12em;
+  height: 1.56em;
+  background-color: var(--secondaryDark);
+  border-radius: 0.31em;
+  top: 1.56em;
+}
+.buttons::before {
+  position: absolute;
+  content: '';
+  width: 0.62em;
+  height: 0.62em;
+  background-color: var(--primaryDark);
+  border-radius: 50%;
+  top: 0.43em;
+  left: 0.31em;
+  box-shadow: 0.93em 0 0 0 var(--planet), 1.87em 0 0 0 var(--accent);
+}
+.buttons::after {
+  position: absolute;
+  content: '';
+  width: 1.25em;
+  height: 1.25em;
+  background-color: var(--secondaryDark);
+  border-radius: 50%;
+  top: 2.5em;
+  left: 0.93em;
+}
+.tank {
+  position: absolute;
+  width: 7.5em;
+  height: 7.5em;
+  background-color: var(--secondaryDark);
+  border-radius: 0.62em;
+  top: 5.62em;
+}
+.hand-l,
+.hand-r {
+  position: absolute;
+  width: 4.37em;
+  height: 1.56em;
+  background-color: var(--secondary);
+  top: -0.5em;
+}
+.hand-l {
+  transform: rotate(15deg);
+  left: -2.81em;
+}
+.hand-r {
+  transform: rotate(-15deg);
+  right: -2.81em;
+}
+.hand-l::before,
+.hand-r::before {
+  position: absolute;
+  content: '';
+  width: 1.56em;
+  height: 4.93em;
+  background-color: var(--secondary);
+  border-radius: 1.56em;
+  top: -3.37em;
+}
+.hand-l::before {
+  left: -0.68em;
+}
+.hand-r::before {
+  right: -0.68em;
+}
+.hand-l::after,
+.hand-r::after {
+  position: absolute;
+  content: '';
+  width: 1.68em;
+  height: 0.31em;
+  background-color: var(--accent);
+  border-radius: 0.37em;
+  top: -1.87em;
+}
+.hand-l::after {
+  left: -0.75em;
+}
+.hand-r::after {
+  right: -0.75em;
+}
+.leg-l,
+.leg-r {
+  position: absolute;
+  width: 2.5em;
+  height: 5em;
+  background-color: var(--secondary);
+  top: 5.62em;
+}
+.leg-l {
+  transform: rotate(20deg);
+  left: -0.75em;
+}
+.leg-r {
+  transform: rotate(-20deg);
+  right: -0.75em;
+}
+.leg-l::before,
+.leg-r::before {
+  position: absolute;
+  content: '';
+  width: 2.62em;
+  height: 1.56em;
+  background-color: var(--white);
+  border-radius: 50% 50% 0 0;
+  bottom: 0px;
+}
+.leg-l::before {
+  left: -0.06em;
+}
+.leg-r::before {
+  right: -0.06em;
+}
+.leg-l::after,
+.leg-r::after {
+  position: absolute;
+  content: '';
+  width: 2.62em;
+  height: 0.31em;
+  background-color: var(--accent);
+  border-radius: 0 0 0.25em 0.25em;
+  bottom: -0.25em;
+}
+.leg-l::after {
+  left: -0.06em;
+}
+.leg-r::after {
+  right: -0.06em;
+}
+.pipe {
+  position: absolute;
+  width: 4.62em;
+  height: 2.62em;
+  border: 0.62em solid var(--primary);
+  border-top: none;
+  border-radius: 0 0 2.68em 1.25em;
+  top: 4.62em;
+  left: 2.84em;
+}
+.pipe::before {
+  position: absolute;
+  content: '';
+  width: 1.25em;
+  height: 2.5em;
+  border: 0.62em solid var(--primary);
+  border-bottom: none;
+  border-left: none;
+  border-radius: 0 2.68em 0 0;
+  top: -2.5em;
+  left: 3.37em;
+}
+.stars {
+  position: absolute;
+  width: 0.37em;
+  height: 0.37em;
+  background-color: var(--white);
+  border-radius: 0.62em;
+  top: 4.18em;
+  left: 7.5em;
+  box-shadow: -3.75em 7.5em 0 0 var(--white), 21.25em 9.37em 0 0 var(--white),
+    16.87em 15.62em 0 0 var(--white), 11.87em 23.12em 0 0 var(--white),
+    1.25em 20.62em 0 0 var(--white);
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    font-size: 16px;
+  }
+}

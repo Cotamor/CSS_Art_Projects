@@ -53,6 +53,7 @@ const projects = [
   { name: 'dragon' },
   { name: 'ticktock' },
   { name: 'rabbit' },
+  { name: 'astronaut' },
 ]
 const list = document.getElementById('list')
 

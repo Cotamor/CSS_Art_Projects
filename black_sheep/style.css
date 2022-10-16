@@ -1,0 +1,229 @@
+:root {
+  --primary: #0c333f;
+  --primaryDark: #002436;
+  --secondary: #c32954;
+  --secondaryDark: #8c1837;
+  --accent: #0078bc;
+  --bkg: #fed767;
+  --bkgDark: #b75e06;
+  --black: #232323;
+  --white: #fefefe;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bkg);
+  height: 100vh;
+  caret-color: transparent;
+  overflow: hidden;
+}
+.ground {
+  font-size: 10px;
+  position: absolute;
+  width: 100%;
+  height: 10em;
+  background-color: var(--bkgDark);
+  bottom: 0px;
+}
+.ground::after {
+  position: absolute;
+  content: '';
+  height: 1.87em;
+  width: 375em;
+  background-repeat: repeat no-repeat;
+  background-size: 3.12em 1.87em;
+  background-image: radial-gradient(
+    circle at 1.56em 1.87em,
+    var(--bkgDark) 1.87em,
+    var(--bkg) 1.87em
+  );
+  transform: translateX(-219em);
+  animation: slide 15s infinite linear;
+}
+@keyframes slide {
+  100% {
+    transform: translateX(0);
+  }
+}
+.container {
+  font-size: 10px;
+  position: absolute;
+  width: 31.25em;
+  height: 31.25em;
+  margin: auto;
+  inset-inline: 0;
+  bottom: 10em;
+}
+.face {
+  position: absolute;
+  width: 8.75em;
+  height: 6.25em;
+  background: linear-gradient(to right, var(--primary) 80%, var(--accent) 81%);
+  border-radius: 6.25em 0 0 6.25em;
+  left: 2.06em;
+  bottom: 8.12em;
+  transform-origin: 50% 100%;
+  animation: face-shake 0.3s infinite;
+}
+@keyframes face-shake {
+  50% {
+    transform: rotate(-5deg);
+  }
+}
+.ears,
+.ears::before {
+  position: absolute;
+  width: 1.12em;
+  height: 3.12em;
+  background-color: var(--primary);
+  top: -2.18em;
+  border-radius: 1.25em;
+}
+.ears {
+  left: 4.68em;
+  transform: rotate(-30deg);
+}
+.ears::before {
+  content: '';
+  top: 0.43em;
+  left: 0.87em;
+  transform: rotate(56deg);
+}
+.eye,
+.eye::before {
+  position: absolute;
+  width: 1.87em;
+  height: 1.87em;
+  border-radius: 50%;
+  background-color: var(--black);
+  border: 0.5em solid var(--white);
+}
+.eye {
+  top: 1.25em;
+  left: 1.87em;
+}
+.eye::before {
+  content: '';
+  left: 1.06em;
+  top: -0.5em;
+}
+.mouth,
+.mouth::before {
+  position: absolute;
+  width: 2.5em;
+  height: 1.25em;
+}
+.mouth {
+  border-radius: 0 0 1.25em 1.25em;
+  background-color: var(--secondary);
+  bottom: 0.87em;
+  right: 2.68em;
+  overflow: hidden;
+}
+.mouth::before {
+  content: '';
+  border-radius: 1.56em 1.56em 0 0;
+  background-color: var(--secondaryDark);
+  right: -0.56em;
+  bottom: -0.25em;
+}
+.body {
+  position: absolute;
+  width: 15.62em;
+  height: 15.62em;
+  background-color: var(--primary);
+  border-radius: 50%;
+  top: 11.12em;
+  left: 10.75em;
+  box-shadow: 0 -7.5em 0 -5.62em var(--primary),
+    0 7.5em 0 -5.62em var(--primary), -7.5em 0 0 -5.62em var(--primary),
+    7.5em 0 0 -5.62em var(--primary), 6.87em 2.81em 0 -5.62em var(--primary),
+    5.31em 5.31em 0 -5.62em var(--primary),
+    2.81em 6.87em 0 -5.62em var(--primary),
+    6.87em -2.81em 0 -5.62em var(--primary),
+    5.31em -5.31em 0 -5.62em var(--primary),
+    2.81em -6.87em 0 -5.62em var(--primary),
+    -6.87em -2.81em 0 -5.62em var(--primary),
+    -5.31em -5.31em 0 -5.62em var(--primary),
+    -2.81em -6.87em 0 -5.62em var(--primary),
+    -6.87em 2.81em 0 -5.62em var(--primary),
+    -5.31em 5.31em 0 -5.62em var(--primary),
+    -2.81em 6.87em 0 -5.62em var(--primary);
+  animation: updown 0.4s infinite;
+}
+.body::before {
+  position: absolute;
+  content: '';
+  background-color: var(--primary);
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes updown {
+  50% {
+    transform: translateY(0.62em);
+  }
+}
+.leg {
+  position: absolute;
+  width: 1.25em;
+  height: 5em;
+  background-color: var(--primaryDark);
+  border-radius: 0 0 1.25em 1.25em;
+  bottom: 0px;
+}
+
+.leg-1 {
+  left: 15em;
+}
+.leg-2 {
+  left: 16.87em;
+}
+.leg-3 {
+  left: 20em;
+}
+.leg-4 {
+  left: 21.87em;
+}
+.leg-2,
+.leg-4 {
+  animation: run1 0.4s infinite linear;
+}
+@keyframes run1 {
+  33% {
+    transform: translate(-1.87em, -1.87em);
+  }
+  66% {
+    transform: translate(-1.87em, 0px);
+  }
+}
+.leg-1,
+.leg-3 {
+  animation: run2 0.4s infinite linear;
+}
+
+@keyframes run2 {
+  65% {
+    transform: translateY(0px);
+  }
+  66% {
+    transform: translateY(-1.87em);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    font-size: 14px;
+  }
+  .ground {
+    font-size: 14px;
+  }
+}

@@ -55,6 +55,7 @@ const projects = [
   { name: 'rabbit' },
   { name: 'astronaut' },
   { name: 'black_sheep' },
+  { name: 'sleepy_cloud' },
 ]
 const list = document.getElementById('list')
 

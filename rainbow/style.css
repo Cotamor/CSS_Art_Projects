@@ -30,7 +30,7 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 0.5em;
 }
-.container::after {
+/* .container::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -38,7 +38,7 @@ body {
   background-color: var(--white);
   bottom: 0;
   border-radius: 0.5em;
-}
+} */
 .rainbow-color {
   position: absolute;
   top: 50%;

@@ -30,7 +30,7 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 0.5em;
 }
-/* .container::after {
+.container::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -38,7 +38,7 @@ body {
   background-color: var(--white);
   bottom: 0;
   border-radius: 0.5em;
-} */
+}
 .rainbow-color {
   position: absolute;
   top: 50%;
@@ -51,15 +51,19 @@ body {
 @keyframes spin {
   25% {
     transform: translate(-50%, -50%) rotate(180deg);
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
   }
   55% {
     transform: translate(-50%, -50%) rotate(180deg);
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
   }
   85% {
     transform: translate(-50%, -50%) rotate(360deg);
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 .rainbow-color-5 {

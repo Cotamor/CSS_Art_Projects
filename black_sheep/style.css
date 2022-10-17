@@ -160,8 +160,8 @@ body {
   position: absolute;
   content: '';
   background-color: var(--primary);
-  width: 230px;
-  height: 230px;
+  width: 14.37em;
+  height: 14.37em;
   border-radius: 50%;
   top: 50%;
   left: 50%;

@@ -11,40 +11,41 @@
 *,
 *::after,
 *::before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  margin: 0;
-  padding: 0;
   min-height: 100vh;
   color: var(--primary-color1);
   background-color: var(--secondary-color2);
 }
 h1 {
   text-align: center;
+  margin: 0.62em;
 }
 h2 {
   position: relative;
-  margin-left: 50px;
+  margin-left: 2.12em;
 }
 h3 {
-  margin-top: 0;
-  padding-top: 16px;
+  margin-bottom: 1em;
+  padding-top: 1em;
 }
 h2::after {
   content: '';
   position: absolute;
-  height: 4px;
-  width: 100px;
+  height: 0.25em;
+  width: 6.25em;
   background-color: #444;
-  border-radius: 20px;
-  bottom: -5px;
+  border-radius: 1.25em;
+  bottom: -0.31em;
   left: 0px;
 }
 .container {
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 81.25em;
 }
 ul {
   display: flex;
@@ -52,17 +53,19 @@ ul {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 70px;
+  margin-top: 1.87em;
+  margin-bottom: 4.37em;
 }
 li {
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 0.35em;
   overflow: hidden;
-  font-size: 14px;
+  font-size: 0.87em;
   list-style-type: none;
-  margin: 20px;
+  margin: 1.42em;
+  /* margin-inline: 0.71em; */
   text-align: center;
-  width: 350px;
+  width: 25em;
 }
 li > a {
   display: block;
@@ -71,17 +74,17 @@ li > a {
 li img {
   display: block;
   object-fit: cover;
-  height: 200px;
-  width: 350px;
+  height: 14.28em;
+  width: 25em;
 }
 button {
   background-color: var(--accent-color1);
   color: whitesmoke;
   border: none;
   font-weight: bold;
-  border-radius: 20px;
-  padding: 7px 15px;
-  margin-bottom: 10px;
+  border-radius: 1.42em;
+  padding: 0.5em 1.07em;
+  margin-bottom: 0.71em;
   cursor: pointer;
   transition: transform 0.5s ease;
 }
@@ -93,13 +96,13 @@ button:active {
 }
 footer {
   background-color: var(--accent-color2);
-  font-size: 18px;
+  font-size: 1em;
   text-align: center;
   position: fixed;
   bottom: 0px;
   right: 0px;
   left: 0px;
-  padding: 20px;
+  padding: 1.25em;
 }
 footer a {
   color: black;
@@ -107,4 +110,16 @@ footer a {
 }
 footer i {
   color: green;
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    margin-left: 1em;
+  }
+  footer {
+    display: none;
+  }
 }

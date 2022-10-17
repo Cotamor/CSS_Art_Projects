@@ -58,6 +58,7 @@ const projects = [
   { name: 'sleepy_cloud' },
   { name: 'spinning_card' },
   { name: 'rainbow' },
+  { name: 'aurora_spinner' },
 ]
 const list = document.getElementById('list')
 

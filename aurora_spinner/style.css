@@ -1,0 +1,135 @@
+:root {
+  --color1: #ff057c;
+  --color2: #800f86;
+  --color3: #1ba8e9;
+  --color4: #34ff78;
+  --color5: #f7fb1f;
+  --color6: #ffb326;
+  --white: #efefef;
+  --black: #262626;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--black);
+  caret-color: transparent;
+}
+.container {
+  font-size: 12px;
+  position: absolute;
+  width: 25em;
+  height: 25em;
+  border-radius: 50%;
+  margin: auto;
+  inset: 0;
+  overflow: hidden;
+  transform-origin: 50% 50%;
+  animation: spin 9s infinite linear;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Blur Filter */
+.container::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backdrop-filter: blur(2.5em);
+}
+/* Dounut Shaped Cover */
+.container::after {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 50%;
+  background-color: var(--black);
+  border-radius: 50%;
+  top: 25%;
+  left: 25%;
+}
+.container div {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -2;
+  animation: scale-up infinite;
+}
+@keyframes scale-up {
+  50% {
+    transform: scale(1.8);
+  }
+}
+
+.container div:nth-child(1) {
+  width: 87%;
+  height: 95%;
+  background-color: var(--color1);
+  top: -2.75em;
+  left: -5.06em;
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+.container div:nth-child(2) {
+  width: 95%;
+  height: 78%;
+  background-color: var(--color2);
+  top: -3.68em;
+  left: 6.12em;
+  animation-duration: 2s;
+  animation-delay: 2s;
+}
+.container div:nth-child(3) {
+  width: 74%;
+  height: 99%;
+  background-color: var(--color3);
+  top: 0.18em;
+  left: 10.93em;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+.container div:nth-child(4) {
+  width: 74%;
+  height: 58%;
+  background-color: var(--color4);
+  top: 9.25em;
+  left: 11.5em;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+.container div:nth-child(5) {
+  width: 50%;
+  height: 63%;
+  background-color: var(--color5);
+  top: 13.56em;
+  left: 5.43em;
+  animation-duration: 2s;
+  animation-delay: 3.1s;
+}
+.container div:nth-child(6) {
+  width: 73%;
+  height: 34%;
+  background-color: var(--color6);
+  top: 16.62em;
+  left: -4.31em;
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    font-size: 16px;
+  }
+}

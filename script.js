@@ -59,6 +59,7 @@ const projects = [
   { name: 'spinning_card' },
   { name: 'rainbow' },
   { name: 'aurora_spinner' },
+  { name: 'birthday_cake' },
 ]
 const list = document.getElementById('list')
 

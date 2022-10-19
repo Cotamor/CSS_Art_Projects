@@ -60,6 +60,7 @@ const projects = [
   { name: 'rainbow' },
   { name: 'aurora_spinner' },
   { name: 'birthday_cake' },
+  { name: 'record_player' },
 ]
 const list = document.getElementById('list')
 
